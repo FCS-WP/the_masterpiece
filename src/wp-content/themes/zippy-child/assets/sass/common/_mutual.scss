@@ -1,0 +1,60 @@
+/* Base spacing */
+p {
+  margin-bottom: 0.8em !important;
+}
+
+/* Utilities */
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+/* Base headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2em !important;
+}
+
+h2 {
+  font-size: 2.5rem !important;
+}
+
+h3 {
+  font-size: 1em !important;
+}
+
+h4 {
+  line-height: 1.5em !important;
+  font-weight: 300 !important;
+}
+
+h5 {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 1.3em !important;
+}
+
+/* Base Button */
+
+.btn-custom {
+  transition: transform 0.2s ease-in !important;
+
+  &:hover {
+    outline: none;
+    transform: scale(0.95);
+    background: none !important;
+  }
+}
+
+/* Base underline setting */
+
+.b-u > :where(p, h1, h2, h3, h4, h5, h6, span) {
+  display: inline !important;
+  border-bottom: 1px solid $green-color !important;
+}

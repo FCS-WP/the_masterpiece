@@ -1,3 +1,4 @@
+import "./home";
 /* This code below for JavaScript ES6 */
 
 /*
