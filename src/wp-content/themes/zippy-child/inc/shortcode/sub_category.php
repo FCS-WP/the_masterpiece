@@ -1,5 +1,4 @@
 <?php
-
 add_shortcode('sub_query_category_shortcode', 'custom_subcategory_by_parent');
 function custom_subcategory_by_parent()
 {

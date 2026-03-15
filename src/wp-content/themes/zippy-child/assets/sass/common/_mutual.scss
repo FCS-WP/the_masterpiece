@@ -12,6 +12,13 @@ p {
   padding: 0;
 }
 
+.mt-30 {
+  margin-top: 30px !important ;
+}
+
+.mt-20 {
+  margin-top: 20px !important ;
+}
 /* Base headings */
 h1,
 h2,
@@ -22,13 +29,16 @@ h6 {
   line-height: 1.2em !important;
 }
 
+// Page Title
 h2 {
   font-size: 2.5rem !important;
 }
 
+// Link Titile
 h3 {
   font-size: 1em !important;
 }
+
 
 h4 {
   line-height: 1.5em !important;
@@ -57,4 +67,22 @@ h5 {
 .b-u > :where(p, h1, h2, h3, h4, h5, h6, span) {
   display: inline !important;
   border-bottom: 1px solid $green-color !important;
+}
+
+/* Custom text width */
+.txt-50 {
+  width: 100%;
+  @include tablet {
+    width: 80%;
+  }
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.txt-80 {
+  width: 100%;
+  @include desktop {
+    width: 80%;
+  }
 }

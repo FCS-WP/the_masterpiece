@@ -242,3 +242,70 @@
     cursor: pointer;
   }
 }
+.ab-collections-icons-site {
+  .col {
+    .col-inner {
+      padding-top: 50px;
+
+      .box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 280px;
+        padding: 24px 20px;
+        background: transparent;
+        overflow: visible;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: url("/wp-content/uploads/2026/03/Asset-16@4x-8.png")
+            center / 100% 100% no-repeat;
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .box-image,
+        .box-text {
+          position: relative;
+          z-index: 1;
+        }
+
+        .box-image {
+          width: 64px !important;
+          margin-bottom: 16px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .box-text {
+          padding: 0 !important;
+          text-align: center;
+
+          .box-text-inner {
+            max-width: 260px;
+            margin: 0 auto;
+          }
+
+          h4 {
+            margin-bottom: 10px;
+            color: $white-color !important;
+          }
+
+          p {
+            margin-bottom: 0;
+            color: $white-color !important;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}
