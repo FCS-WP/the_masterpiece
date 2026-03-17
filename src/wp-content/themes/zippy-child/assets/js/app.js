@@ -1,4 +1,5 @@
 import "./home";
+import "./contact-form";
 /* This code below for JavaScript ES6 */
 
 /*

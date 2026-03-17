@@ -309,3 +309,114 @@
     }
   }
 }
+
+/* Homepage Subcategory */
+.subcategory-collection {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 calc((100% - (32px * 4)) / 5);
+    max-width: calc((100% - (32px * 4)) / 5);
+    min-height: 320px;
+    padding: 40px 32px;
+    text-align: center;
+    text-decoration: none !important;
+    overflow: hidden;
+    background: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/wp-content/uploads/2026/03/Asset-16@4x-8.png") center /
+        100% 100% no-repeat;
+      z-index: 0;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  &__thumnail {
+    display: block;
+    width: 72px;
+    height: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+    color: $white-color;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  &__desc {
+    display: block;
+    max-width: 360px;
+    margin: 0 auto;
+    color: $white-color;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  @media (max-width: 1200px) {
+    &__item {
+      flex: 0 0 calc((100% - (24px * 2)) / 3);
+      max-width: calc((100% - (24px * 2)) / 3);
+    }
+
+    &__grid {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__grid {
+      gap: 20px;
+    }
+
+    &__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      min-height: 250px;
+      padding: 32px 20px;
+    }
+
+    &__thumnail {
+      width: 60px;
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    &__desc {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+}

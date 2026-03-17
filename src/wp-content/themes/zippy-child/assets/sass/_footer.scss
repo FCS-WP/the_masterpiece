@@ -27,7 +27,17 @@
     }
 
     .ux-menu-link__text {
+      color: $text-color !important;
+    }
+  }
+
+  .ux-menu-link { 
+    &__text { 
       color: $text-color;
+    }
+
+    &__link {
+      border-bottom-style: none !important ;
     }
   }
 }

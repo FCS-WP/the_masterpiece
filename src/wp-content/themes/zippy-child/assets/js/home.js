@@ -9,24 +9,22 @@ hp_products.append(
 var sub_category = $(".subcategory-collection");
 
 $(document).on("click", ".js-parent-category", function (e) {
-  sub_category.find(".parent-category").remove();
+  sub_category.find(".subcategory-collection__grid").remove();
+  sub_category.find(".subcategory-collection-error-message").remove();
   e.preventDefault();
   var parentCategory = "";
   if ($(this).hasClass("js-jewellery-category")) {
     parentCategory = "jewellery";
     getSubCategory(parentCategory);
-    sub_category.append(
-      `<div class ="parent-category">${parentCategory}</div>`,
-    );
   } else if ($(this).hasClass("js-beads-category")) {
     parentCategory = "beads";
-    sub_category.append(
-      `<div class ="parent-category">${parentCategory}</div>`,
-    );
+    getSubCategory(parentCategory);
   } else if ($(this).hasClass("js-jadeite-carvings-category")) {
     parentCategory = "jadeite-carvings";
+    getSubCategory(parentCategory);
+  } else {
     sub_category.append(
-      `<div class ="parent-category">${parentCategory}</div>`,
+      `<span class ='subcategory-collection-error-message'>Something wrong :( Please try again!</span>`,
     );
   }
 });
