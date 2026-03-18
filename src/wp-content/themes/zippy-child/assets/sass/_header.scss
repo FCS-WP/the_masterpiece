@@ -16,10 +16,32 @@
       }
     }
   }
-  
+
   .header-nav.header-nav-main.nav.nav-left {
     > li.account-item + li.menu-item {
       margin-left: auto;
+    }
+  }
+
+  .header-cart-icon {
+    &::after {
+      font-size: 8px;
+      color: $text-color;
+    }
+  }
+}
+
+.nav-sidebar {
+  .ux-search-submit {
+    .icon-search {
+      color: $grey;
+    }
+  }
+  .menu-item {
+    &:hover {
+      > a {
+        color: $green-color;
+      }
     }
   }
 }

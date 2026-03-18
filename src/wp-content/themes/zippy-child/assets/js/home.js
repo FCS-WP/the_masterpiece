@@ -6,6 +6,10 @@ hp_products.append(
 );
 
 /* Toggle Parent Category */
+$(document).ready(function () {
+  getSubCategory("jewellery");
+});
+
 var sub_category = $(".subcategory-collection");
 
 $(document).on("click", ".js-parent-category", function (e) {
@@ -30,6 +34,7 @@ $(document).on("click", ".js-parent-category", function (e) {
 });
 
 function getSubCategory(parent_category) {
+  sub_category.addClass("loading");
   $.ajax({
     url: "/wp-admin/admin-ajax.php",
     type: "POST",
@@ -39,10 +44,12 @@ function getSubCategory(parent_category) {
       parent_slug: parent_category,
     },
     success: function (response) {
+      sub_category.removeClass("loading");
       sub_category.append(response.data.html);
     },
-    error: function () {
-      console.log(1234);
+    error: function (response) {
+      sub_category.removeClass("loading");
+      console.log(response);
     },
   });
 }

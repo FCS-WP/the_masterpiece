@@ -70,3 +70,39 @@ function contact_form_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('contact_form', 'contact_form_shortcode');
+
+function simple_email_form_shortcode($atts)
+{
+    $atts = shortcode_atts(array(
+        'placeholder' => 'Your email',
+        'button_text' => '→',
+    ), $atts);
+
+    ob_start();
+    ?>
+    <div class="simple-email-form-wrapper">
+        <form class="simple-email-form" method="post" action="">
+            <?php wp_nonce_field('simple_email_form_action', 'simple_email_form_nonce'); ?>
+
+            <div class="simple-email-form__inner">
+                <input
+                    type="email"
+                    name="subscriber_email"
+                    class="simple-email-form__input"
+                    placeholder="<?php echo esc_attr($atts['placeholder']); ?>"
+                    required
+                >
+
+                <button type="submit" class="simple-email-form__button" aria-label="Confirm">
+                    <span class="btn-text"><?php echo esc_html($atts['button_text']); ?></span>
+                    <span class="loader"></span>
+                </button>
+            </div>
+
+            <div class="simple-email-form__response" style="display:none;"></div>
+        </form>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode('simple_email_form', 'simple_email_form_shortcode');

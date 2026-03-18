@@ -1,5 +1,7 @@
+import "../lib/slick/slick.min";
 import "./home";
 import "./contact-form";
+import "./slider";
 /* This code below for JavaScript ES6 */
 
 /*

@@ -31,14 +31,17 @@ h6 {
 
 // Page Title
 h2 {
-  font-size: 2.5rem !important;
+  font-size: 1.8rem !important;
+
+  @include desktop {
+    font-size: 2.5rem !important;
+  }
 }
 
 // Link Titile
 h3 {
   font-size: 1em !important;
 }
-
 
 h4 {
   line-height: 1.5em !important;

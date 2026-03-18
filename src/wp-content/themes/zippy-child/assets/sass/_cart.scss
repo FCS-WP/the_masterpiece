@@ -1,0 +1,9 @@
+button[name="woocommerce_checkout_place_order"] {
+  color: $text-color;
+  border: 2px solid $text-color;
+
+  &:hover {
+    color: $white-color;
+    background-color: $text-color;
+  }
+}

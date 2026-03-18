@@ -168,9 +168,49 @@ function handle_contact_form_submission()
     if ($sent) {
         wp_send_json_success(['message' => 'Thank you! Your message has been sent successfully.']);
     } else {
-        wp_send_json_error(['message' => 'Sorry, there was an error sending your message. Please try again.']);  
+        wp_send_json_error(['message' => 'Sorry, there was an error sending your message. Please try again.']);
     }
 }
 
 add_action('wp_ajax_contact_form_submit', 'handle_contact_form_submission');
 add_action('wp_ajax_nopriv_contact_form_submit', 'handle_contact_form_submission');
+
+/* Handle Email Form */
+function handle_simple_email_form_submission()
+{
+    if (
+        !isset($_POST['simple_email_form_nonce']) ||
+        !wp_verify_nonce(wp_unslash($_POST['simple_email_form_nonce']), 'simple_email_form_action')
+    ) {
+        wp_send_json_error(['message' => 'Security check failed.']);
+    }
+
+    $email = isset($_POST['subscriber_email']) ? sanitize_email(wp_unslash($_POST['subscriber_email'])) : '';
+
+    if (empty($email)) {
+        wp_send_json_error(['message' => 'Please enter your email.']);
+    }
+
+    if (!is_email($email)) {
+        wp_send_json_error(['message' => 'Please enter a valid email address.']);
+    }
+
+    $to = get_option('admin_email');
+    $subject = 'New Email Subscription';
+    $headers = [
+        'Content-Type: text/html; charset=UTF-8',
+    ];
+
+    $message = '<p><strong>Email:</strong> ' . esc_html($email) . '</p>';
+
+    $sent = wp_mail($to, $subject, $message, $headers);
+
+    if ($sent) {
+        wp_send_json_success(['message' => 'Confirmed successfully.']);
+    } else {
+        wp_send_json_error(['message' => 'Something went wrong. Please try again.']);
+    }
+}
+
+add_action('wp_ajax_simple_email_form_submit', 'handle_simple_email_form_submission');
+add_action('wp_ajax_nopriv_simple_email_form_submit', 'handle_simple_email_form_submission');

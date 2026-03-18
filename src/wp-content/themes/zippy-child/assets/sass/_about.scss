@@ -19,3 +19,12 @@
 .ab-collection-icons {
     
 }
+
+/* Responsive for mobile */
+@media screen and (max-width:767px) {
+    .ab-collection-icons {
+        .col > .col-inner {
+            padding: 20px 0px 0px 0px !important;
+        }
+    }
+}

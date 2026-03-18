@@ -1,0 +1,16 @@
+.product-main {
+  button[name="add-to-cart"] {
+    border: 2px solid $text-color;
+    color: $text-color;
+    transition: 0.3 ease;
+    &:hover {
+      background-color: $text-color;
+      color: $white-color;
+    }
+  }
+  padding-bottom: 20px !important;
+}
+
+.social-icons {
+  display: none !important;
+}
