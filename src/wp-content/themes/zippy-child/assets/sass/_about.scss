@@ -1,30 +1,32 @@
 /* About Us - A Approach */
 .ab-approach {
-
-
 }
 
 /* About Us - Philosophy and Standard */
 .ab-philosophy-standard {
-    
-    h5 {
-        font-size: 2em !important;
-    }
-    .row-large {
-        justify-content: space-between;
-    }
+  h5 {
+    font-size: 2em !important;
+  }
+  .row-large {
+    justify-content: space-between;
+  }
 }
 
 /* About Us - Collection Icons */
 .ab-collection-icons {
-    
 }
 
 /* Responsive for mobile */
-@media screen and (max-width:767px) {
-    .ab-collection-icons {
-        .col > .col-inner {
-            padding: 20px 0px 0px 0px !important;
-        }
+@media screen and (max-width: 767px) {
+  .ab-collection-icons {
+    .col > .col-inner {
+      padding: 20px 0px 0px 0px !important;
     }
+  }
+
+  .ab-philo-standard {
+    .text {
+      text-align: center !important;
+    }
+  }
 }

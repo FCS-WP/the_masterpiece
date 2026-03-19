@@ -1,7 +1,13 @@
 .flickity-prev-next-button.next {
   right: 0% !important;
+  @include desktop {
+    right: -2% !important;
+  }
 }
 
 .flickity-prev-next-button.previous {
   left: 0% !important;
+  @include desktop {
+    left: -2% !important;
+  }
 }
