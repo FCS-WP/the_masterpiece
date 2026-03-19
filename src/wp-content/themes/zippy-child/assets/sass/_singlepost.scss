@@ -1,0 +1,33 @@
+
+.post-sidebar {
+    padding: 20px 30px !important;
+    .wp-block-heading {
+        color: $text-color;
+        font-size: 1.2em !important;
+       
+    }
+}
+
+.wp-block-search { 
+    &__input {
+        margin: 0px;
+        height: 2.7em !important;
+    }
+    
+    &__button {
+        padding: 7px 20px !important;
+        background: none !important;
+        border: 2px solid $text-color !important;
+        color: $text-color !important;
+    }
+
+    &__label {
+        font-size: 1.2em;
+    }
+}
+
+.wp-block-latest-posts {
+    &__post-title {
+        text-transform: capitalize !important;
+    }
+}

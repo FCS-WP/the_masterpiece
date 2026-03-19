@@ -1,0 +1,47 @@
+/* Home Header */
+
+#masthead {
+  position: relative;
+  background: url("/wp-content/uploads/2026/03/hp-background-1.webp") center
+    center / cover no-repeat;
+  border-bottom: 1px solid #00bb764e;
+
+  .nav-right {
+    .cart-img-icon {
+      width: 16px;
+    }
+    .menu-item {
+      &:nth-child(3) {
+        margin-right: auto !important;
+      }
+    }
+  }
+
+  .header-nav.header-nav-main.nav.nav-left {
+    > li.account-item + li.menu-item {
+      margin-left: auto;
+    }
+  }
+
+  .header-cart-icon {
+    &::after {
+      font-size: 8px;
+      color: $text-color;
+    }
+  }
+}
+
+.nav-sidebar {
+  .ux-search-submit {
+    .icon-search {
+      color: $grey;
+    }
+  }
+  .menu-item {
+    &:hover {
+      > a {
+        color: $green-color;
+      }
+    }
+  }
+}

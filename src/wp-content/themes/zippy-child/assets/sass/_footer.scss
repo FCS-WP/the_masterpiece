@@ -1,0 +1,144 @@
+/* Main Footer */
+.main-footer {
+  .col {
+    .text {
+      display: inline-block;
+    }
+
+    p,
+    span {
+      font-size: 0.95em;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 1em !important;
+      line-height: 1.5;
+      border-bottom: 1px solid $green-color;
+      margin-bottom: 0.8em;
+    }
+  }
+
+  .col:nth-child(2) {
+    .ux-menu-link__link {
+      border-bottom: 0;
+    }
+
+    .ux-menu-link__text {
+      color: $text-color !important;
+    }
+  }
+
+  .ux-menu-link {
+    &__text {
+      color: $text-color;
+    }
+
+    &__link {
+      border-bottom-style: none !important ;
+    }
+  }
+}
+
+.absolute-footer {
+  display: none !important;
+}
+
+.simple-email-form-wrapper {
+  max-width: 280px;
+
+  .simple-email-form__inner {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #1f1f1f;
+  }
+
+  .simple-email-form__input {
+    flex: 1;
+    border: 0;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    color: #1f1f1f;
+    padding: 0;
+    margin: 0;
+
+    &::placeholder {
+      color: #5f6f67;
+      opacity: 1;
+    }
+    &:focus {
+      background: transparent;
+      box-shadow: none !important;
+      outline: none !important;
+      border: none !important;
+    }
+  }
+
+  .simple-email-form__button {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    background: transparent;
+    color: #1f1f1f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0px;
+    margin-left: 8px !important;
+
+    .btn-text {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .loader {
+      display: none;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(31, 31, 31, 0.25);
+      border-top: 2px solid #1f1f1f;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    &.loading {
+      .btn-text {
+        display: none;
+      }
+
+      .loader {
+        display: block;
+      }
+    }
+  }
+
+  .simple-email-form__response {
+    margin-top: 8px;
+    font-size: 13px;
+
+    &.success {
+      color: #2e7d32;
+    }
+
+    &.error {
+      color: #c62828;
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.newsletter-col {
+  p {
+    margin: 0px !important;
+  }
+}

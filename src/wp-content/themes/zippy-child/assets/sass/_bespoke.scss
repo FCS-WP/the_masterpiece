@@ -1,0 +1,135 @@
+/* Bespoke Jadeite Icons */
+.bp-icons {
+  .col {
+    .col-inner {
+      padding: 15px 0 0 !important;
+      @include desktop {
+        padding: 30px 0 0 !important;
+      }
+      @include desktop {
+        padding: 30px 0 0 !important;
+      }
+    }
+  }
+
+  .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    padding: 32px 24px;
+    background: transparent;
+    overflow: visible;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/wp-content/uploads/2026/03/Asset-16@4x-8.png") center /
+        100% 100% no-repeat;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .box-image,
+    .box-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .box-image {
+      width: 56px !important;
+      margin-bottom: 14px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .box-text {
+      padding: 0 !important;
+      text-align: center;
+
+      .box-text-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h4 {
+        margin: 0;
+        color: $white-color !important;
+        line-height: 1.5;
+      }
+
+      p {
+        margin: 10px 0 0;
+        color: $white-color !important;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @include tablet {
+    .col {
+      .col-inner {
+        padding: 30px 0 0;
+      }
+    }
+
+    .box {
+      min-height: 240px;
+      padding: 36px 28px;
+
+      .box-image {
+        width: 62px !important;
+        margin-bottom: 16px;
+      }
+
+      .box-text {
+        .box-text-inner {
+          max-width: 240px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    .col {
+      .col-inner {
+        padding: 30px 0 0;
+      }
+    }
+
+    .box {
+      min-height: 260px;
+      padding: 40px 32px;
+
+      .box-image {
+        width: 68px !important;
+        margin-bottom: 18px;
+      }
+
+      .box-text {
+        .box-text-inner {
+          max-width: 260px;
+          margin: 0 auto;
+        }
+
+        h4 {
+          line-height: 1.45;
+        }
+
+        p {
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
