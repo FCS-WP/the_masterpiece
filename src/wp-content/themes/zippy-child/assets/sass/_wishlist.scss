@@ -1,0 +1,50 @@
+/* Wishlist Page */
+.wishlist .content-area {
+  padding: 30px 10px;
+
+  @include tablet {
+    padding: 30px 10px;
+  }
+
+  @include desktop {
+    padding: 80px 0px;
+  }
+}
+
+.wishlist_item .product-action {
+  min-width: 170px !important;
+}
+
+.wishlist_item .product-action button[name="tinvwl-add-to-cart"] {
+  border: 1px solid $text-color;
+  color: $text-color;
+
+  &:hover {
+    > .tinvwl-txt {
+      color: $white-color;
+    }
+    background-color: $text-color;
+  }
+}
+
+/* Responsive config */
+
+@media screen and (max-width: 767px) {
+  .tinv-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      display: contents;
+    }
+  }
+
+  .wishlist_item {
+    .product-thumbnail {
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
