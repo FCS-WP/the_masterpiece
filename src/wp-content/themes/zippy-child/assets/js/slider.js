@@ -1,7 +1,11 @@
 /* Init Mobile Slider for Subcategory in Homepage */
 function initSubcategorySlick() {
   if ($(window).width() <= 767) {
-    if (!$(".subcategory-collection .subcategory-collection__grid").hasClass("slick-initialized")) {
+    if (
+      !$(".subcategory-collection .subcategory-collection__grid").hasClass(
+        "slick-initialized",
+      )
+    ) {
       $(".subcategory-collection .subcategory-collection__grid").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -10,8 +14,14 @@ function initSubcategorySlick() {
       });
     }
   } else {
-    if ($(".subcategory-collection .subcategory-collection__grid").hasClass("slick-initialized")) {
-      $(".subcategory-collection .subcategory-collection__grid").slick("unslick");
+    if (
+      $(".subcategory-collection .subcategory-collection__grid").hasClass(
+        "slick-initialized",
+      )
+    ) {
+      $(".subcategory-collection .subcategory-collection__grid").slick(
+        "unslick",
+      );
     }
   }
 }
